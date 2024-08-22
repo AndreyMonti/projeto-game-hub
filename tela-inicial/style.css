@@ -58,7 +58,7 @@ nav ul li a:hover {
 .hero {
     position: relative;
     height: calc(100vh - 70px);
-    background: url(./imagens/Captura\ de\ tela\ 2024-08-22\ 085514.png) no-repeat center center/cover;
+    background: url(./imagens/backgound_Roxo.png) no-repeat center center/cover;
     background-blend-mode: screen;
 }
 
