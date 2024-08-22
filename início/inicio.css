@@ -1,0 +1,79 @@
+*{
+    margin: 0;    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #000;
+}
+
+header .logo {
+    width: 80px;
+    height: auto;
+}
+
+.search-bar input {
+    padding: 10px;
+    border-radius: 50px;
+    border: none;
+    width: 300px;
+    font-size: 16px;
+    justify-content: end;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: end;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+nav a:hover{
+    color: rgb(127, 0, 159);
+}
+
+nav{
+    color: rgb(255, 255, 255);
+    width: 100%;
+}
+
+
+
+body{
+    background-color: rgb(35, 0, 64);
+    color: white;
+}
+
+#fotogame{
+    width: 70vh;
+    border-radius: 20px;
+    border-top-left-radius: 30px;
+    margin-left: 900px;
+    margin-top: 150px;
+}
+
+h1{
+    margin-left: 30px;
+    padding-bottom: 35px;
+}
+
+h2{
+    padding-bottom: 30px;
+    margin-left: 30px;
+}
