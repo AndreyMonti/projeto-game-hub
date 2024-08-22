@@ -8,7 +8,7 @@ body, html {
 }
 
 body{
-    background-image: url('./imagens/imagem_fundo_login.png');
+    background-image: url('../imagens/imagem_fundo_login.png');
     background-size: 100%; 
     background-repeat: no-repeat;
     background-position: center;
