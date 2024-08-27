@@ -9,9 +9,10 @@ body, html {
 
 body{
     background-image: url('../imagens/imagem_fundo_login.png');
-    background-size: 100%; 
+    background-size: cover; 
     background-repeat: no-repeat;
     background-position: center;
+    background-attachment: fixed;
 }
 
 .login-container {
@@ -78,4 +79,99 @@ body{
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+@media (max-width: 480px) {
+    .login-box {
+        flex-direction: column;
+        height: auto;
+        max-width: 100%;
+        width: 90%;
+    }
+
+    .login-form {
+        padding: 20px;
+    }
+
+    .login-form h2 {
+        font-size: 16px;
+    }
+
+    .login-form input {
+        padding: 8px;
+    }
+
+    .login-form .login-button {
+        font-size: 14px;
+    }
+
+    .login-image {
+        display: none;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .login-box {
+        flex-direction: column;
+        height: auto;
+        max-width: 90%;
+        width: 90%;
+    }
+
+    .login-form {
+        padding: 30px;
+    }
+
+    .login-form h2 {
+        font-size: 17px;
+    }
+
+    .login-form input {
+        padding: 9px;
+    }
+
+    .login-form .login-button {
+        font-size: 15px;
+    }
+
+    .login-image {
+        height: 200px;
+    }
+
+    .login-image img {
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .login-box {
+        flex-direction: row;
+        height: 400px;
+        max-width: 80%;
+    }
+
+    .login-form {
+        padding: 35px;
+    }
+
+    .login-form h2 {
+        font-size: 18px;
+    }
+
+    .login-form input {
+        padding: 10px;
+    }
+
+    .login-form .login-button {
+        font-size: 16px;
+    }
+
+    .login-image {
+        height: 100%;
+    }
+
+    .login-image img {
+        object-fit: cover;
+    }
 }
