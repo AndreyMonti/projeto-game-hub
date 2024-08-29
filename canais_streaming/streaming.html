@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Canais de Streaming</title>
-    <link rel="stylesheet" href="streaming.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Canais de Streaming</title>
+        <link rel="stylesheet" href="streaming.css">
+        <script src="streaming.js" defer></script>
 </head>
 <body>
     <header>
@@ -25,36 +26,39 @@
     <main>
         <section class="platforms">
             <div class="container">
-                <p id="titulo1">Conheça os canais de streaming mais ultilizados</p>
-                <div class="platform">
-                    <img id="twitchlogo" src="../imagens/logo_twitch.png" alt="Logo do Twitch" class="platform-logo">
-                    <div>
-                        <h2>Twitch</h2>
-                        <p>Twitch é uma plataforma de streaming ao vivo, especialmente popular entre gamers. Fundada em 2011, ela permite que os usuários transmitam e assistam a jogos em tempo real. Além de videogames, o Twitch também abriga transmissões de eventos de eSports, música, arte e outras formas de entretenimento ao vivo. Os usuários podem interagir com os streamers através de chats ao vivo, criando uma comunidade envolvente e dinâmica.</p>
+                <div class="carousel-item">
+                    <img src="../imagens/twitch1.jpg" alt="Logo Twitch">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Twitch</h5>
+                      <p>Twitch é uma plataforma de streaming ao vivo, especialmente popular entre gamers. Twitch também abriga transmissões de eventos de eSports, música, arte e outras formas de entretenimento ao vivo. Os usuários podem interagir com os streamers através de chats ao vivo, criando uma comunidade envolvente e dinâmica.</p>
                     </div>
                 </div>
-                <div class="platform">
-                    <img id="gosulogo" src="../imagens/gosu_gamers.jpg" alt="Logo do GosuGames" class="platform-logo">
-                    <div>
-                        <h2>GosuGames</h2>
-                        <p>GosuGames é uma comunidade de jogos com mais de 20 anos de existência, dedicada à criação e compartilhamento de conteúdo de alta qualidade sobre videogames. O site oferece notícias, análises, guias e recursos para jogadores, atraindo mais de 3 milhões de visitantes mensais e servindo como um ponto de encontro para entusiastas de games.</p>
+                <div class="carousel-item">
+                    <img src="../imagens/gosugamers.jpg" alt="GosuGames logo">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>GosuGamers</h5>
+                      <p>GosuGamers é uma comunidade de jogos com mais de 20 anos de existência, dedicada à criação e compartilhamento de conteúdo de alta qualidade sobre videogames. O site oferece notícias, análises, guias e recursos para jogadores, atraindo mais de 3 milhões de visitantes mensais.</p>
                     </div>
                 </div>
-                <div class="platform">
-                    <img id="youtubelogo" src="../imagens/logo_youtube.jpg" alt="Logo do YouTube Gaming" class="platform-logo">
-                    <div>
-                        <h2>YouTube Gaming</h2>
-                        <p>YouTube Gaming é uma seção do YouTube dedicada a jogos e conteúdo relacionado. Lançado para fornecer uma experiência de visualização melhor para os gamers, permite que os usuários assistam a gameplays, transmissões ao vivo, trailers e vídeos sobre jogos. O YouTube Gaming também oferece recursos de interação, como chats ao vivo e comentários, permitindo que os criadores de conteúdo se conectem com seus espectadores.</p>
+                <div class="carousel-item">
+                    <img src="../imagens/logo_youtube.jpg" alt="Youtube logo">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Youtube Gaming</h5>
+                      <p>YouTube Gaming é uma seção do YouTube dedicada a jogos e conteúdo relacionado. Lançado para fornecer uma experiência de visualização melhor para os gamers, permite que os usuários assistam a gameplays, transmissões ao vivo, trailers e vídeos sobre jogos. O YouTube Gaming também oferece recursos de interação, como chats ao vivo e comentários.</p>
                     </div>
                 </div>
-                <div class="platform">
-                    <img id="facebooklogo" src="../imagens/facebook_gaming_logo.png" alt="Logo do Facebook Gaming" class="platform-logo">
-                    <div>
-                        <h2>Facebook Gaming</h2>
-                        <p>Facebook Gaming é uma plataforma de streaming de jogos integrada à rede social Facebook, permitindo que criadores compartilhem transmissões ao vivo e vídeos. A plataforma facilita a interação entre usuários e streamers, promovendo comunidades em torno de jogos específicos e integrando a experiência de jogo com a rede social.</p>
+                <div class="carousel-item">
+                    <img src="../imagens/facebook_gaming_logo.jpg" alt="Facebook logo">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>FacebookGaming</h5>
+                      <p>Facebook Gaming é uma plataforma de streaming de jogos integrada à rede social Facebook, permitindo que criadores compartilhem transmissões ao vivo e vídeos. A plataforma facilita a interação entre usuários e streamers, promovendo comunidades em torno de jogos.</p>
                     </div>
                 </div>
-            </div>
+
+                <div class="carousel-controls">
+                    <button class="prev">&lt;</button>
+                    <button class="next">&gt;</button>
+                </div>
         </section> 
         <section class="call-to-action">
             <div class="container">
@@ -63,13 +67,11 @@
             </div>
         </section>
     </main>
-
     <footer>
         <div class="container">
             <p>&copy; 2024 - Todos os direitos reservados</p>
         </div>
     </footer>
 
-    <script src="streaming.js"></script>
 </body>
 </html>
