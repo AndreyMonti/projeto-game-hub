@@ -1,5 +1,18 @@
-*{
-    margin: 0;    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
 }
 
 header {
@@ -11,7 +24,7 @@ header {
 }
 
 header .logo {
-    width: 80px;
+    width: 50px;
     height: auto;
 }
 
@@ -21,14 +34,12 @@ header .logo {
     border: none;
     width: 300px;
     font-size: 16px;
-    justify-content: end;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
-    justify-content: end;
 }
 
 nav ul li a {
@@ -42,22 +53,6 @@ nav ul li a {
 nav ul li a:hover {
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 5px;
-}
-
-nav a:hover{
-    color: rgb(127, 0, 159);
-}
-
-nav{
-    color: rgb(255, 255, 255);
-    width: 100%;
-}
-
-
-
-body{
-    background-color: rgb(35, 0, 64);
-    color: white;
 }
 
 #fotogame{
