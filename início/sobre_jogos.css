@@ -58,15 +58,14 @@ nav ul li a:hover {
 
 .hero {
     position: relative;
-    background-image: url('../imagens/game\ img.jpg'); /* substitua pelo caminho da sua imagem de fundo */
-    background-size: cover;
-    background-position: left center; /* Centraliza a imagem na parte esquerda */
+    background-image: url('../imagens/background-sobre.jpg'); 
+    background-size: 70% auto;
+    background-position: left center;
     background-repeat: no-repeat;
     padding: 100px 20px;
     display: flex;
-    justify-content: flex-end; /* Alinha o conteúdo ao lado direito */
+    justify-content: flex-end;
 }
-
 .hero::before {
     content: "";
     position: absolute;
@@ -74,7 +73,7 @@ nav ul li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Overlay escuro para reduzir a opacidade */
+    background: rgba(0, 0, 0, 0.5); 
     z-index: 0;
 }
 
@@ -82,25 +81,27 @@ nav ul li a:hover {
     content: "";
     position: absolute;
     top: 0;
-    left: 50%; /* Aplica o fade out na metade direita */
+    left: 50%; 
     width: 50%;
     height: 100%;
     background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
     z-index: 1;
-    pointer-events: none; /* Permite interações através do elemento */
+    pointer-events: none; 
 }
 
 .hero-text {
     max-width: 800px;
-    margin-right: 40px; /* Espaçamento maior entre o texto e a borda direita */
-    text-align: justify; /* Textos justificados */
-    z-index: 2; /* Garante que o texto esteja acima do fade */
+    margin-right: 40px;
+    text-align: justify; 
+    z-index: 2; 
+    margin-top: -50px;
 }
 
 .hero h1 {
     font-size: 36px;
     margin-bottom: 20px;
     font-weight: bold;
+    margin-bottom: 30px;
 }
 
 .hero p {
@@ -110,17 +111,17 @@ nav ul li a:hover {
 
 .info-sections {
     display: flex;
-    justify-content: flex-end; /* Alinha as seções à direita */
+    justify-content: flex-end; 
     margin-top: 50px;
-    text-align: justify; /* Textos justificados nas seções de informação */
+    text-align: justify;
     z-index: 2;
 }
 
 .info {
     margin-left: 30px; /* Espaçamento entre as seções */
     max-width: 300px;
+    margin-bottom: 30px;
 }
-
 .info h2 {
     font-size: 24px;
     margin-bottom: 10px;
@@ -128,6 +129,7 @@ nav ul li a:hover {
 
 .info p {
     font-size: 16px;
+    margin-bottom: 30px;
 }
 
 @media (max-width: 768px) {
