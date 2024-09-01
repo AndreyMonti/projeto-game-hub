@@ -132,6 +132,10 @@ nav ul li a:hover {
     margin-bottom: 30px;
 }
 
+.info li {
+    padding: 5px;
+}
+
 @media (max-width: 768px) {
     .info-sections {
         flex-direction: column;
