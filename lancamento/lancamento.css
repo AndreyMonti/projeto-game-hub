@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    overflow-y: auto;
+}
+
+body {
+    background-color: black;
+    color: #fff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #000;
+}
+
+header .logo {
+    width: 50px;
+    height: auto;
+}
+
+.search-bar input {
+    padding: 10px;
+    border-radius: 50px;
+    border: none;
+    width: 300px;
+    font-size: 16px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+.cards-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: 50px;
+    background-image: url(../imagens/background-eventos.jpg);
+    background-attachment: fixed;
+    background-size: 70%;
+
+}
+
+h2{
+    font-size: 36px;
+    margin-left: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    width: 48%; 
+    gap: 20px; /* Espaçamento vertical entre os cards */
+}
+
+.card {
+    position: relative;
+    width: 100%; /* Os cards ocuparão toda a largura do container */
+    height: 250px; /* Aumente a altura dos cards para que ocupem mais espaço */
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.3s ease-in-out;
+}
+
+.card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card:hover img {
+    filter: blur(2px);
+}
+
+.card:hover .overlay {
+    opacity: 1;
+}
+
+.subscription-section {
+    background-color: #2a2a2a;
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    height: 70%;
+}
+
+.carousel-container {
+    position:relative;
+    width: 80%;
+    max-width: 1200px;
+    overflow: hidden;
+    justify-content: center;
+    padding-left: 300px;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.content {
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-size: 18px;
+    margin-bottom: 60px;
+
+}
+
+.content img{
+    width: 350px;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.prev {
+    left: 315px;
+}
+
+.next {
+    right: 10px;
+}
+
+.indicators {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #ddd;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #d41ee1;
+}
