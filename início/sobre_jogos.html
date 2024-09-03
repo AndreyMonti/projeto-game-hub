@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Início</title>
     <link rel="stylesheet" href="../início/sobre_jogos.css">
+    <script src="sobre_jogos.js"></script>
 </head>
+<body>
     <header>
         <img src="../imagens/Icone_Controle.png" alt="Ícone" class="logo">
         <div class="search-bar">
             <input type="text" placeholder="O que deseja descobrir?">
         </div>
-        <nav>
+        <button class="menu-toggle" id="menu-toggle">☰</button>
+        <nav id="navigation_header">
             <ul>
                 <li><a href="#">Curiosidades</a></li>
                 <li><a href="../lancamento/lancamentos.html">Eventos</a></li>
@@ -20,7 +23,6 @@
             </ul>
         </nav>
     </header>
-<body>
     <section class="hero">
         <div class="hero-text">
             <h1>GAMEHUB: SEU PORTAL PARA O MUNDO DOS JOGOS!</h1>
@@ -45,5 +47,14 @@
             </div>
         </div>
     </section>
+    <aside id="sidebar">
+        <button class="close-sidebar" id="close-sidebar">×</button>
+        <ul>
+            <li><a href="#">Curiosidades</a></li>
+            <li><a href="../lancamento/lancamentos.html">Eventos</a></li>
+            <li><a href="../canais_streaming/streaming.html">Transmissões</a></li>
+            <li><a href="#">Sua conta</a></li>
+        </ul>
+    </aside>
 </body>
 </html>
