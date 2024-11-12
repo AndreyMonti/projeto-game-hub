@@ -5,7 +5,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $email = $_POST['email'];
     $senha = md5($_POST['senha']);
 
-    $stmt = $connection->prepare("SELECT * FROM usuarios WHERE email = ? AND senha = ?");
+    $stmt = $connection->prepare("SELECT * FROM usuarios WHERE email_usuario = ? AND senha_usuario = ?");
     $stmt->bind_param("ss", $email, $senha);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -13,7 +13,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     if($result->num_rows > 0){
         $user = $result->fetch_assoc();
         $_SESSION['usuario'] = $user['tipo'];
-        header("Location: ./início/sobre_jogos.php");
+        header("Location: ./início/sobre_jogos.html");
     } else {
         echo "<script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>";
         echo "<script>

@@ -5,7 +5,7 @@ if (isset($_POST['cadastro'])) {
     $email = $_POST['email'];
     $senha = md5($_POST['senha']);
 
-    $stmt = $connection->prepare("INSERT INTO usuarios (email, senha) VALUES (?, ?)");
+    $stmt = $connection->prepare("INSERT INTO usuarios (email_usuario, senha_usuario) VALUES (?, ?)");
     $stmt->bind_param("ss", $email, $senha);
     
     if ($stmt->execute()) {
