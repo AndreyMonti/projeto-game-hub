@@ -28,7 +28,7 @@ if (!isset($_SESSION['email_sessao']) || !isset($_SESSION['tipo_sessao'])) {
                 <li><a href="#">Curiosidades</a></li>
                 <li><a href="../lancamento/lancamentos.php">Eventos</a></li>
                 <li><a href="../canais_streaming/streaming.php">Transmissões</a></li>
-                <li><a href="#">Sua conta</a></li>
+                <li><a href="../sua-conta/sua-conta.php">Sua conta</a></li>
             </ul>
         </nav>
     </header>
