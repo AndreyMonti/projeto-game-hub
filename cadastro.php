@@ -5,10 +5,15 @@ if (isset($_POST['cadastro'])) {
     $email = $_POST['email'];
     $senha = $_POST['senha'];
 
-    $stmt = $connection->prepare("INSERT INTO usuarios (email_usuario, senha_usuario) VALUES (?, ?)");
-    $stmt->bind_param("ss", $email, $senha);
+    // Define o tipo do usuário como "user" por padrão
+    $tipo_usuario = "user";
+
+    // Prepara a consulta para inserir o email, senha e tipo de usuário
+    $stmt = $connection->prepare("INSERT INTO usuarios (email_usuario, senha_usuario, tipo_usuario) VALUES (?, ?, ?)");
+    $stmt->bind_param("sss", $email, $senha, $tipo_usuario);
     
     if ($stmt->execute()) {
+        // Redireciona para a página de login após o cadastro
         header("Location: index.php");
     } else {
         echo "Erro ao cadastrar: " . $connection->error;
@@ -17,6 +22,7 @@ if (isset($_POST['cadastro'])) {
     $stmt->close();
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
