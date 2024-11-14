@@ -1,32 +1,32 @@
 <?php
-session_start();
 include 'conexao.php';
 
-if ($_SERVER["REQUEST_METHOD"] == 'POST') {
-    $email_digital = $_POST['email'];
-    $senha_digital = $_POST['senha'];
+if (isset($_POST['cadastro'])) {
+    $email = $_POST['email'];
+    $senha = $_POST['senha'];
 
-    $email_digital = mysqli_real_escape_string($connection, $email_digital);
-    $senha_digital = mysqli_real_escape_string($connection, $senha_digital);
+    // Criptografar a senha com MD5
+    $senha_criptografada = md5($senha);
 
-    $query = "SELECT * FROM usuarios WHERE email_usuario = '$email_digital' AND senha_usuario = '$senha_digital'";
-    $result = mysqli_query($connection, $query);
+    // Define o tipo do usuário como "user" por padrão
+    $tipo_usuario = "user";
 
-    if ($result && mysqli_num_rows($result) == 1) {
-        $usuario_logado = mysqli_fetch_assoc($result);
-
-        $_SESSION['email_sessao'] = $usuario_logado['email_usuario'];
-        $_SESSION['tipo_sessao'] = $usuario_logado['tipo_usuario'];
-        
-        header("Location: ./tela-inicial/tela-inicial.php");
-        exit();
-    } else {
-        $_SESSION['login_erro'] = "Email ou senha incorretos";
+    // Prepara a consulta para inserir o email, senha criptografada e tipo de usuário
+    $stmt = $connection->prepare("INSERT INTO usuarios (email_usuario, senha_usuario, tipo_usuario) VALUES (?, ?, ?)");
+    $stmt->bind_param("sss", $email, $senha_criptografada, $tipo_usuario);
+    
+    if ($stmt->execute()) {
+        // Redireciona para a página de login após o cadastro
         header("Location: index.php");
-        exit();
+        exit();  // Garante que o script pare após o redirecionamento
+    } else {
+        echo "Erro ao cadastrar: " . $connection->error;
     }
+
+    $stmt->close();
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
