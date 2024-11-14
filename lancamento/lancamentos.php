@@ -42,42 +42,35 @@ $usuario_tipo = $_SESSION['tipo_sessao'];
     <h2>Saiba mais sobre os eventos de games!</h2>
     <section class="cards-section">
         <div class="card-container">
-            <div class="card">
-                <a href="https://www.brasilgameshow.com.br/">
-                    <img src="../imagens/bgs-logo.png" alt="Logo Bgs">
-                </a>
+            <div style="cursor: pointer;" onclick="window.open('https://www.brasilgameshow.com.br/', '_blank');" class="card">
+                <img src="../imagens/bgs-logo.png" alt="Logo Bgs">
                 <div class="overlay">
                     <h2>Saiba Mais</h2>
                 </div>
             </div>
-            <div class="card">
-                <a href="https://www.ccxp.com.br/">
-                    <img src="../imagens/ccxp-logo.jpg" alt="Logo CCXP">
-                </a>
-                <div class="overlay">
-                    <h2>Saiba Mais</h2>
-                </div>
+        <div style="cursor: pointer;" onclick="window.open('https://www.ccxp.com.br/', '_blank');" class="card">
+            <img src="../imagens/ccxp-logo.jpg" alt="Logo CCXP">
+            <div class="overlay">
+                <h2>Saiba Mais</h2>
             </div>
         </div>
-        <div class="card-container">
-            <div class="card">
-                <a href="https://www.comic-con.org/">
-                    <img src="../imagens/comic-con.jpg" alt="Logo Comic Con">
-                </a>
-                <div class="overlay">
-                    <h2>Saiba Mais</h2>
-                </div>
-            </div>
-            <div class="card">
-                <a href="https://latam.gamescom.global/pt/">
-                    <img src="../imagens/gamescomlatam-logo.jpg" alt="Logo Gamescom Latam">
-                </a>
-                <div class="overlay">
-                    <h2>Saiba Mais</h2>
-                </div>
+    </div>
+    <div class="card-container">
+        <div style="cursor: pointer;" onclick="window.open('https://www.comic-con.org/', '_blank');" class="card">
+            <img src="../imagens/comic-con.jpg" alt="Logo Comic Con">
+            <div class="overlay">
+                <h2>Saiba Mais</h2>
             </div>
         </div>
+        <div style="cursor: pointer;" onclick="window.open('https://latam.gamescom.global/pt/', '_blank');" class="card">
+            <img src="../imagens/gamescomlatam-logo.jpg" alt="Logo Gamescom Latam">
+            <div class="overlay">
+                <h2>Saiba Mais</h2>
+            </div>
+        </div>
+    </div>
     </section>
+
 
     <section class="subscription-section">
         <div class="carousel-container">
