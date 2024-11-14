@@ -21,7 +21,9 @@ $usuario_tipo = $_SESSION['tipo_sessao'];
 </head>
 <body>
     <header>
-        <img src="../imagens/Icone_Controle.png" alt="Ícone" class="logo">
+        <a href="../tela-inicial/tela-inicial.php">
+            <img src="../imagens/Icone_Controle.png" alt="Ícone" class="logo">
+        </a>
         <div class="search-bar">
             <input type="text" placeholder="O que deseja descobrir?">
         </div>
