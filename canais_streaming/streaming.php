@@ -18,7 +18,9 @@ if (!isset($_SESSION['email_sessao']) || !isset($_SESSION['tipo_sessao'])) {
 </head>
 <body>
     <header>
-        <img src="../imagens/Icone_Controle.png" alt="Ícone" class="logo">
+    <a href="../tela-inicial/tela-inicial.php">
+                <img src="../imagens/Icone_Controle.png" alt="Ícone" class="logo">
+            </a>
         <div class="search-bar">
             <input type="text" placeholder="O que deseja descobrir?">
         </div>
@@ -36,30 +38,38 @@ if (!isset($_SESSION['email_sessao']) || !isset($_SESSION['tipo_sessao'])) {
         <section class="platforms">
             <div class="container">
                 <div class="carousel-item">
-                    <img src="../imagens/twitch1.jpg" alt="Logo Twitch">
+                    <a href="https://www.twitch.tv/">
+                        <img src="../imagens/twitch1.jpg" alt="Logo Twitch">
+                    </a>
                     <div class="carousel-caption d-none d-md-block">
                       <h5>Twitch</h5>
                       <p>Twitch é uma plataforma de streaming ao vivo, especialmente popular entre gamers. Twitch também abriga transmissões de eventos de eSports, música, arte e outras formas de entretenimento ao vivo. Os usuários podem interagir com os streamers através de chats ao vivo, criando uma comunidade envolvente e dinâmica.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="../imagens/gosugamers.jpg" alt="GosuGames logo">
+                    <a href="https://www.gosugamers.net/">
+                        <img src="../imagens/gosugamers.jpg" alt="GosuGames logo">
+                    </a>
                     <div class="carousel-caption d-none d-md-block">
                       <h5>GosuGamers</h5>
                       <p>GosuGamers é uma comunidade de jogos com mais de 20 anos de existência, dedicada à criação e compartilhamento de conteúdo de alta qualidade sobre videogames. O site oferece notícias, análises, guias e recursos para jogadores, atraindo mais de 3 milhões de visitantes mensais.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="../imagens/logo_youtube.jpg" alt="Youtube logo">
+                    <a href="https://www.youtube.com/gaming">
+                        <img src="../imagens/logo_youtube.jpg" alt="Youtube logo">
+                    </a>
                     <div class="carousel-caption d-none d-md-block">
                       <h5>Youtube Gaming</h5>
                       <p>YouTube Gaming é uma seção do YouTube dedicada a jogos e conteúdo relacionado. Lançado para fornecer uma experiência de visualização melhor para os gamers, permite que os usuários assistam a gameplays, transmissões ao vivo, trailers e vídeos sobre jogos. O YouTube Gaming também oferece recursos de interação, como chats ao vivo e comentários.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="../imagens/facebook_gaming_logo.jpg" alt="Facebook logo">
+                    <a href="https://www.facebook.com/gaming/video/">
+                        <img src="../imagens/facebook_gaming_logo.jpg" alt="Facebook logo">
+                    </a>
                     <div class="carousel-caption d-none d-md-block">
-                      <h5>FacebookGaming</h5>
+                      <h5>Facebook Gaming</h5>
                       <p>Facebook Gaming é uma plataforma de streaming de jogos integrada à rede social Facebook, permitindo que criadores compartilhem transmissões ao vivo e vídeos. A plataforma facilita a interação entre usuários e streamers, promovendo comunidades em torno de jogos.</p>
                     </div>
                 </div>
