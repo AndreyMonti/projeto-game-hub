@@ -28,7 +28,6 @@ function showSlides(n) {
     slides[slideIndex].style.display = "block";
     dots[slideIndex].className += " active";
 }
-
 document.addEventListener('DOMContentLoaded', function() {
     var header = document.getElementById('header');
     var navigationHeader = document.getElementById('navigation_header');
@@ -37,7 +36,6 @@ document.addEventListener('DOMContentLoaded', function() {
     var sidebar = document.getElementById('sidebar');
     var closeSidebar = document.getElementById('close-sidebar');
     var showSidebar = false;
-
     function toggleSidebar() {
         showSidebar = !showSidebar;
         if (showSidebar) {
@@ -48,10 +46,8 @@ document.addEventListener('DOMContentLoaded', function() {
             content.classList.remove('blur');
         }
     }
-
     menuToggle.addEventListener('click', toggleSidebar);
     closeSidebar.addEventListener('click', toggleSidebar);
-
     window.addEventListener('resize', function() {
         if (window.innerWidth > 768 && showSidebar) {
             toggleSidebar(); // Fecha a sidebar quando a tela é redimensionada para um tamanho maior

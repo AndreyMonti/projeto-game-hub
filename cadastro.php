@@ -3,7 +3,7 @@ include 'conexao.php';
 
 if (isset($_POST['cadastro'])) {
     $email = $_POST['email'];
-    $senha = md5($_POST['senha']);
+    $senha = $_POST['senha'];
 
     $stmt = $connection->prepare("INSERT INTO usuarios (email_usuario, senha_usuario) VALUES (?, ?)");
     $stmt->bind_param("ss", $email, $senha);

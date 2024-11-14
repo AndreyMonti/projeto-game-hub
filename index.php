@@ -1,37 +1,32 @@
 <?php
-include'conexao.php';
+session_start();
+include 'conexao.php';
 
-if($_SERVER['REQUEST_METHOD'] == 'POST'){
-    $email = $_POST['email'];
-    $senha = md5($_POST['senha']);
+if ($_SERVER["REQUEST_METHOD"] == 'POST') {
+    $email_digital = $_POST['email'];
+    $senha_digital = $_POST['senha'];
 
-    $stmt = $connection->prepare("SELECT * FROM usuarios WHERE email_usuario = ? AND senha_usuario = ?");
-    $stmt->bind_param("ss", $email, $senha);
-    $stmt->execute();
-    $result = $stmt->get_result();
+    $email_digital = mysqli_real_escape_string($connection, $email_digital);
+    $senha_digital = mysqli_real_escape_string($connection, $senha_digital);
 
-    if($result->num_rows > 0){
-        $user = $result->fetch_assoc();
-        $_SESSION['usuario'] = $user['tipo'];
-        header("Location: ./início/sobre_jogos.html");
+    $query = "SELECT * FROM usuarios WHERE email_usuario = '$email_digital' AND senha_usuario = '$senha_digital'";
+    $result = mysqli_query($connection, $query);
+
+    if ($result && mysqli_num_rows($result) == 1) {
+        $usuario_logado = mysqli_fetch_assoc($result);
+
+        $_SESSION['email_sessao'] = $usuario_logado['email_usuario'];
+        $_SESSION['tipo_sessao'] = $usuario_logado['tipo_usuario'];
+        
+        header("Location: ./tela-inicial/tela-inicial.php");
+        exit();
     } else {
-        echo "<script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>";
-        echo "<script>
-                window.onload = function() {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'E-mail ou senha inválidos!',
-                    text: 'Tente novamente!',
-                });
-                }
-            </script>";
+        $_SESSION['login_erro'] = "Email ou senha incorretos";
+        header("Location: index.php");
+        exit();
     }
-
-    $stmt->close();
 }
 ?>
-
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -45,18 +40,14 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     <div class="login-container">
         <div class="login-box">
             <div class="login-form">
-                <form action="./tela-inicial/tela-inicial.html">
+                <form method="POST" action="index.php" >
                     <h2>GameHub Email</h2>
-                    <input type="email" placeholder="Coloque seu email abc@exemplo.com" name='email' id="emailUsu" required>
+                    <input type="email" placeholder="Coloque seu email abc@exemplo.com" name="email" id="emailUsu" required>
                     <h2>GameHub Senha</h2>
-                    <input type="password" placeholder="Coloque sua senha" name='senha' id="senhaUsu" required>
-                    <a href="esqueceu_senha.html" class="forgot-password">Esqueceu sua senha?</a>
-                    <button type="submit" class="login-button" onclick="login()">Entrar</button>
+                    <input type="password" placeholder="Coloque sua senha" name="senha" id="senhaUsu" required>
+                    <button type="submit" class="login-button">Entrar</button>
                 </form>
-
-
-            <a href="cadastro.php">Cadastre-se</a>
-
+                <a href="cadastro.php">Cadastre-se</a>
             </div>
             <div class="login-image">
                 <img src="./imagens/imagem_controle_login.jpg" alt="Imagem de jogo">

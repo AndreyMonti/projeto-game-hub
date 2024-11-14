@@ -44,11 +44,9 @@ header .logo {
     color: #fff;
     cursor: pointer;
 }
-
 nav {
     display: flex;
 }
-
 nav ul {
     list-style: none;
     display: flex;
@@ -81,22 +79,18 @@ aside {
     overflow-y: auto;
     z-index: 1000;
 }
-
 aside ul {
     list-style: none;
     margin-top: 40px;
 }
-
 aside ul li {
     margin-bottom: 20px;
 }
-
 aside ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 18px;
 }
-
 aside .close-sidebar {
     background: none;
     border: none;
@@ -107,12 +101,9 @@ aside .close-sidebar {
     top: 20px;
     right: 20px;
 }
-
 body.blur {
     filter: blur(2px);
 }
-
-
 .cards-section {
     display: flex;
     justify-content: space-between;
@@ -275,21 +266,17 @@ h2{
 .dot.active {
     background-color: #d41ee1;
 }
-
 @media (max-width: 768px) {
     nav {
         display: none; /* Oculta a navegação */
     }
-
     .menu-toggle {
         display: block; /* Mostra o botão de menu */
     }
-
     .hero {
         padding: 50px 20px; /* Ajusta o padding no mobile */
     }
 }
-
 @media (max-width: 480px) {
     .hero-text {
         margin-right: 20px;
