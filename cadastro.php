@@ -25,7 +25,6 @@ if (isset($_POST['cadastro'])) {
 <head>
     <meta charset="UTF-8">
     <title>Cadastro</title>
-    <!-- Caminho correto para o arquivo CSS na mesma pasta -->
     <link rel="stylesheet" href="./cadastro/cadastro.css">
 </head>
 <body>
