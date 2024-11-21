@@ -7,9 +7,9 @@ body, html {
     font-family: Arial, sans-serif;
 }
 
-body{
+body {
     background-image: url('../imagens/imagem_fundo_login.png');
-    background-size: cover; 
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
@@ -25,7 +25,7 @@ body{
 
 .login-box {
     display: flex;
-    background-color: #2F2436; 
+    background-color: #2F2436;
     border-radius: 20px;
     overflow: hidden;
     max-width: 900px;
@@ -33,10 +33,20 @@ body{
     height: 400px;
 }
 
+/* Login Form Styling */
 .login-form {
     padding: 40px;
     flex: 1;
     color: rgb(209, 209, 209);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Alinha verticalmente */
+    align-items: center; /* Alinha horizontalmente */
+}
+
+.login-form form {
+    width: 100%; /* Usa 100% do espaço permitido */
+    max-width: 400px; /* Define um tamanho máximo */
 }
 
 .login-form h2 {
@@ -45,32 +55,37 @@ body{
     font-size: 18px;
 }
 
-.login-form input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
+.login-form input,
+.login-form .login-button {
+    width: 100%; /* Alinha o tamanho dos campos */
+    padding: 12px; /* Aumenta o espaçamento interno */
+    margin-bottom: 15px; /* Define espaçamento entre os elementos */
     border: none;
     border-radius: 5px;
-}
-
-.login-form .forgot-password {
-    display: block;
-    margin-bottom: 20px;
-    color: #8e7cc3;
-    text-decoration: none;
+    box-sizing: border-box;
 }
 
 .login-form .login-button {
-    width: 100%;
-    padding: 10px;
     background-color: #8e7cc3;
-    border: none;
-    border-radius: 5px;
     color: white;
     font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s ease; /* Adiciona um efeito de transição */
 }
 
+.login-form .login-button:hover {
+    background-color: #6c5b9a; /* Cor ao passar o mouse */
+}
+
+.login-form a {
+    text-align: center;
+    color: #8e7cc3;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Login Image Styling */
 .login-image {
     flex: 1;
 }
@@ -81,6 +96,7 @@ body{
     object-fit: cover;
 }
 
+/* Responsividade para dispositivos menores */
 @media (max-width: 480px) {
     .login-box {
         flex-direction: column;
@@ -91,6 +107,10 @@ body{
 
     .login-form {
         padding: 20px;
+    }
+
+    .login-form form {
+        max-width: 90%; /* Ajusta largura em dispositivos menores */
     }
 
     .login-form h2 {
@@ -110,6 +130,7 @@ body{
     }
 }
 
+/* Responsividade para tablets */
 @media (min-width: 481px) and (max-width: 768px) {
     .login-box {
         flex-direction: column;
@@ -144,6 +165,7 @@ body{
     }
 }
 
+/* Responsividade para laptops */
 @media (min-width: 769px) and (max-width: 1024px) {
     .login-box {
         flex-direction: row;
