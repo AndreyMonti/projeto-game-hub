@@ -31,7 +31,7 @@ $usuario_tipo = $_SESSION['tipo_sessao'];
             <button class="menu-toggle" id="menu-toggle">☰</button>
             <nav id="navigation_header">
                 <ul>
-                    <li><a href="#">Curiosidades</a></li>
+                    <li><a href="../curiosidades/curiosidades.html">Curiosidades</a></li>
                     <li><a href="../lancamento/lancamentos.php">Eventos</a></li>
                     <li><a href="../canais_streaming/streaming.php">Transmissões</a></li>
                     <li><a href="../sua-conta/sua-conta.php">Sua conta</a></li>
